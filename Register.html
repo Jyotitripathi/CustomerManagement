@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Register Here...</title>
+
+<script type="text/javascript">
+	function validateForm()
+{
+	
+	var name=document.forms["myform"]["txtname"].value;
+	if (name==null || name=="")
+	  {
+	  alert("Name must be filled out");
+	  return false;
+	  }
+	
+	var email=document.forms["myform"]["txtemail"].value;
+	if (email==null || email=="")
+	  {
+	  alert("Email must be filled out");
+	  return false;
+	  }
+
+	var password =document.forms["myform"]["txtpassword"].value;
+	  
+	if (password==null || password=="")
+		{
+	  alert("Password name must be filled out");
+	  return false;
+	  }
+	
+	var confirmPassword =document.forms["myform"]["txtconfirmpassword"].value;
+	  
+	if (confirmPassword!== password || confirmPassword=="null")
+		{
+	  alert("Password donot match");
+	  return false;
+	  }
+	
+	var age =document.forms["myform"]["txtage"].value;
+	  
+	if (age==null || age=="")
+		{
+	  alert("Age must be filled out");
+	  return false;
+	  }
+	
+   
+}
+</script>
+
+</head>
+<body>
+
+<form name = "myform" action="Register"  method="post"  onsubmit="return validateForm()">
+ Name: <input type="text"  name="txtname"   placeholder="eg.john watson"><br>          
+ Email: <input type="text"  name="txtemail"  placeholder= "eg.john@example.com"><br>
+ Password: <input type="text"  name="txtpassword"><br>
+ Confirm Password: <input type="text"  name="txtconfirmpassword" ><br>
+ Age : <input type="text"  name="txtage" > <br>
+ Phone Number: <input type="text"  name="txtphone" > <br>
+<input type ="submit"  value="Register">
+
+
+</form>
+</body>
+</html>

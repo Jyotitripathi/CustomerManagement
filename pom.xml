@@ -1,0 +1,125 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.itextpdf</groupId>
+  <artifactId>CustomerManagement</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+
+  <name>CustomerManagement</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+  <!-- always needed -->
+    <dependency>
+        <groupId>com.itextpdf</groupId>
+        <artifactId>kernel</artifactId>
+        <version>7.0.4</version>
+    </dependency>
+
+    <!-- always needed -->
+    <dependency>
+        <groupId>com.itextpdf</groupId>
+        <artifactId>io</artifactId>
+        <version>7.0.4</version>
+    </dependency>
+
+    <!-- always needed -->
+    <dependency>
+        <groupId>com.itextpdf</groupId>
+        <artifactId>layout</artifactId>
+        <version>7.0.4</version>
+    </dependency>
+
+    <!-- only needed for forms -->
+    <dependency>
+        <groupId>com.itextpdf</groupId>
+        <artifactId>forms</artifactId>
+        <version>7.0.4</version>
+    </dependency>
+
+    <!-- only needed for PDF/A -->
+    <dependency>
+        <groupId>com.itextpdf</groupId>
+        <artifactId>pdfa</artifactId>
+        <version>7.0.4</version>
+    </dependency>
+
+    <!-- only needed for digital signatures -->
+    <dependency>
+        <groupId>com.itextpdf</groupId>
+        <artifactId>sign</artifactId>
+        <version>7.0.4</version>
+    </dependency>
+
+    <!-- only needed for barcodes -->
+    <dependency>
+        <groupId>com.itextpdf</groupId>
+        <artifactId>barcodes</artifactId>
+        <version>7.0.4</version>
+    </dependency>
+
+    <!-- only needed for Asian fonts -->
+    <dependency>
+        <groupId>com.itextpdf</groupId>
+        <artifactId>font-asian</artifactId>
+        <version>7.0.4</version>
+    </dependency>
+
+    <!-- only needed for hyphenation -->
+    <dependency>
+        <groupId>com.itextpdf</groupId>
+        <artifactId>hyph</artifactId>
+        <version>7.0.4</version>
+    </dependency>
+  
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  <packaging>maven-plugin</packaging>
+  <build>
+  	<pluginManagement>
+  		<plugins>
+  			<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+  			<plugin>
+  				<groupId>org.eclipse.m2e</groupId>
+  				<artifactId>lifecycle-mapping</artifactId>
+  				<version>1.0.0</version>
+  				<configuration>
+  					<lifecycleMappingMetadata>
+  						<pluginExecutions>
+  							<pluginExecution>
+  								<pluginExecutionFilter>
+  									<groupId>
+  										org.apache.maven.plugins
+  									</groupId>
+  									<artifactId>
+  										maven-plugin-plugin
+  									</artifactId>
+  									<versionRange>
+  										[3.2,)
+  									</versionRange>
+  									<goals>
+  										<goal>descriptor</goal>
+  									</goals>
+  								</pluginExecutionFilter>
+  								<action>
+  									<ignore></ignore>
+  								</action>
+  							</pluginExecution>
+  						</pluginExecutions>
+  					</lifecycleMappingMetadata>
+  				</configuration>
+  			</plugin>
+  		</plugins>
+  	</pluginManagement>
+  </build>
+</project>
